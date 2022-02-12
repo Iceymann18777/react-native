@@ -1,15 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "danger": "node ./node_modules/.bin/danger"
+    "danger": "node ./node_modules/.bin/danger",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
-    "danger": "^7.1.4",
+    "danger": "^10.8.0",
     "lodash.includes": "^4.3.0",
     "minimatch": "^3.0.4"
   },
   "dependencies": {
     "@octokit/rest": "^16.43.0",
-    "firebase": "^7.10.0"
-  }
+    "firebase": "^7.10.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
